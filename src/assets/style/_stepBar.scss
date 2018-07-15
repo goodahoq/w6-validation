@@ -1,0 +1,96 @@
+@import 'utils';
+.sign {
+  margin: auto;
+  width: 100%;
+  border-top: 8px solid $primary;
+  &__step-bar {
+    position: relative;
+    margin: 48px auto;
+    width: 50%;
+    height: 2px; // circle ouside
+    .step-circle {
+      position: absolute;
+      top: -7px;
+      width: 14px;
+      height: 14px;
+      border: 2px solid $primary;
+      border-radius: 100px;
+      text-align: center;
+      line-height: 9px;
+      background-color: #fff; // circle inside
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: $primary;
+        border-radius: 100px;
+      } // positions
+      &:first-of-type {
+        // last circle's line delete
+        &::after {
+          display: none;
+        }
+      }
+      &:nth-child(2) {
+        left: 31%; // step line
+        &::after {
+          content: "";
+          position: absolute;
+          top: 40%;
+          right: 10px;
+          display: block;
+          width: 60px;
+          border-bottom: 2px solid $primary;
+          z-index: -99;
+        }
+      }
+      &:nth-child(3) {
+        right: 31%; // step line
+        &::after {
+          content: "";
+          position: absolute;
+          top: 40%;
+          right: 12px;
+          display: block;
+          width: 60px;
+          border-bottom: 2px solid $primary;
+          z-index: -99;
+        }
+      }
+      &:last-of-type {
+        right: 0; // step line
+        &::after {
+          content: "";
+          position: absolute;
+          top: 40%;
+          right: 10px;
+          display: block;
+          width: 60px;
+          border-bottom: 2px solid $primary;
+          z-index: -99;
+        }
+      }
+    } // state settings
+    .is-disabled {
+      border-color: $secondary;
+      &::before {
+        display: none;
+      }
+      &::after {
+        border-color: $secondary !important;
+      }
+    }
+    .is-done {
+      &::before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-left: -5px;
+        margin-top: 1px;
+        color: $primary;
+        background-color: unset;
+      }
+    }
+  }
+}

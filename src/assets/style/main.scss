@@ -1,0 +1,192 @@
+@import 'transition';
+@import 'stepBar';
+@import 'utils';
+@import 'errorMsg';
+#app {
+  width: 460px;
+  margin: 0 auto;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+input {
+  height: 50px;
+  border: 2px solid $dark;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  font-family: LucidaGrande;
+  &:focus {
+    outline: none;
+    border: 2px solid $primary;
+  }
+}
+
+input::placeholder {
+  font-family: LucidaGrande;
+  font-size: 20px;
+  color: $grey;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 24px;
+}
+
+select {
+  height: 50px;
+  border: 2px solid $dark;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  &:focus {
+    outline: none;
+    border: 2px solid $primary;
+  }
+  &:invalid {
+    color: gray;
+    font-family: LucidaGrande;
+    font-size: 20px;
+    color: $grey;
+    letter-spacing: 0;
+    text-align: left;
+    line-height: 24px;
+  }
+}
+
+//element
+.el-input__inner {
+  height: 50px;
+  border: 2px solid $dark;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  &:focus {
+    outline: none;
+    border: 2px solid $primary;
+  }
+  &:hover {
+    outline: none;
+    border: 2px solid $dark;
+  }
+}
+
+.title {
+  font-family: Roboto-Light;
+  font-size: 44px;
+  color: $dark;
+}
+
+.subtitle {
+  font-family: Roboto-Light;
+  font-size: 24px;
+  color: $dark;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: $primary;
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  color: $light;
+  line-height: 25px;
+  padding: 14px;
+}
+
+.btn:hover {
+  background-color: $primary;
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  color: $light;
+  line-height: 25px;
+  padding: 14px;
+}
+
+.btn:disabled {
+  background-color: $secondary;
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  color: $light;
+  line-height: 25px;
+  padding: 14px;
+}
+
+.card-input {
+  position: relative;
+}
+
+.step-card {
+  margin-bottom: 24px;
+}
+
+.card-title {
+  margin-bottom: 8px;
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  color: $dark;
+  letter-spacing: 0;
+}
+
+.step-body {
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  color: $dark;
+  margin-top: 30px;
+}
+
+.card-upload {
+  height: 140px;
+  border: 2px solid $grey;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s ease;
+  font-family: Roboto-light;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $grey;
+  display: inline-flex;
+  &:hover {
+    color: adjust-color($color: $primary, $lightness: 20%, $alpha: -0.2);
+    border-color: adjust-color($color: $primary, $lightness: 20%, $alpha: -0.2);
+  }
+  &:active {
+    color: $primary;
+    outline: none;
+    border: 2px solid $primary;
+  }
+}
+
+.isUploaded {
+  color: $dark;
+  border-color: $dark;
+  &:hover {
+    color: $dark;
+    border-color: $dark;
+  }
+}
+
+.card-placeHolder {
+  margin: 0 auto;
+  display: flex;
+  align-self: center;
+}
+
+.ph-sub {
+  font-size: 16px;
+}
+
+.done-smile {
+  color: $secondary;
+}
+
+.done-text {
+  font-family: Roboto-Italic;
+  font-style: italic;
+  font-size: 20px;
+  color: $primary;
+  text-align: center;
+  line-height: 25px;
+}

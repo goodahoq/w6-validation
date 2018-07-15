@@ -1,0 +1,78 @@
+@import 'utils';
+.hasError {
+  border: 2px solid $primary-error;
+}
+
+.errorIcon {
+  position: absolute;
+  z-index: 1;
+  right: 6%;
+  top: 25%;
+  font-size: 20px;
+  color: $primary-error;
+}
+
+.bankIcon {
+  position: absolute;
+  z-index: 1;
+  right: 6%;
+  top: 25%;
+  font-size: 20px;
+  color: $grey;
+}
+
+.danger {
+  color: $primary-error;
+}
+
+.allRight {
+  color: $primary;
+}
+
+.errorMsg {
+  position: absolute;
+  background-color: $primary-error;
+  white-space: nowrap;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: $light;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 14px;
+}
+
+.errorRight {
+  top: 15%;
+  left: 100%;
+  margin-left: 10px;
+}
+
+.errorLeft {
+  top: 15%;
+  right: 100%;
+  margin-right: 10px;
+}
+
+.arrow_l_int {
+  width: 0px;
+  height: 0px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent $primary-error transparent transparent;
+  position: absolute;
+  top: 30%;
+  left: -14px;
+}
+
+.arrow_r_int {
+  width: 0px;
+  height: 0px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent transparent $primary-error;
+  position: absolute;
+  top: 30%;
+  right: -14px;
+}

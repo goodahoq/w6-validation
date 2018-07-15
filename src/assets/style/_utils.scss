@@ -1,0 +1,30 @@
+$primary:#0275D8;
+$secondary:#BEE1FF;
+$primary-error:#F5A623;
+$dark:#000000;
+$light:#fff;
+$grey:#9b9b9b;
+.w100 {
+  width: 100% !important;
+}
+
+@for $i from 0 through 20 {
+  @each $prop,
+  $abbrev in (margin: m, padding: p) {
+    .#{$abbrev}#{$i*5} {
+      #{$prop}: $i*5px !important;
+    }
+    .#{$abbrev}T#{$i*5} {
+      #{$prop}-top: $i*5px !important;
+    }
+    .#{$abbrev}B#{$i*5} {
+      #{$prop}-bottom: $i*5px !important;
+    }
+    .#{$abbrev}L#{$i*5} {
+      #{$prop}-left: $i*5px !important;
+    }
+    .#{$abbrev}R#{$i*5} {
+      #{$prop}-right: $i*5px !important;
+    }
+  }
+}
